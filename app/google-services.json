@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "810911661505",
+    "project_id": "uspass-6b42e",
+    "storage_bucket": "uspass-6b42e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810911661505:android:f0d7c71f62036020460340",
+        "android_client_info": {
+          "package_name": "com.example.uspass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810911661505-vlo1qka877omfh5el947ghh70v5a4rjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDKClXAinxDVP87X3YQdA8rYMdefXBzR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810911661505-vlo1qka877omfh5el947ghh70v5a4rjj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
