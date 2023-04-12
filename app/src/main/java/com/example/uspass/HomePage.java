@@ -15,8 +15,9 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        bt_login = (Button) findViewById(R.id.bt_login);
-        bt_register = (Button) findViewById(R.id.bt_register);
+        bt_login = findViewById(R.id.bt_login);
+        bt_register = findViewById(R.id.bt_register);
+        bt_admin = findViewById(R.id.bt_admin_login);
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,5 +32,13 @@ public class HomePage extends AppCompatActivity {
                 startActivity(new Intent(HomePage.this, RegisterActivity.class));
             }
         });
+
+        bt_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomePage.this, Admin_Login.class));
+            }
+        });
+
     }
 }
