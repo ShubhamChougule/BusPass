@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:background="#fff"
             android:padding="8dp"
-
             android:fontFamily="@font/poppins_semibold"
             android:textAlignment="center"
             android:hint="Enter user mobile number"/>
@@ -33,6 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
         android:background="@drawable/white_button_background"
         android:text="Search User"/>
 
@@ -74,10 +75,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
+                android:textColor="@color/white"
                 android:clickable="false"
                 android:layout_weight="1"
                 android:elevation="10dp"
-                android:background="@drawable/white_button_background"
+                android:background="@drawable/black_button"
                 android:text="1 Day"/>
 
             <Button
@@ -85,7 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="false"
-                android:background="@drawable/white_button_background"
+                android:textColor="@color/white"
+                android:background="@drawable/black_button"
                 android:layout_margin="15dp"
                 android:text="1 Week"/>
 
@@ -95,7 +98,8 @@
                 android:layout_weight="1"
                 android:clickable="false"
                 android:layout_margin="15dp"
-                android:background="@drawable/white_button_background"
+                android:textColor="@color/white"
+                android:background="@drawable/black_button"
                 android:text="1 Month"/>
 
         </LinearLayout>
