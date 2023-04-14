@@ -21,10 +21,13 @@ public class AdminHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
-
-
         addPassButton = findViewById(R.id.addPass);
         verifyPassButton = findViewById(R.id.verify);
+
+        adminName = findViewById(R.id.admin_title);
+        Intent intent = getIntent();
+        String adminNameFromDB = intent.getStringExtra("name");
+        adminName.setText("Welcome Admin "+ adminNameFromDB);
 
         addPassButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,8 +37,6 @@ public class AdminHome extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
         verifyPassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,10 +47,7 @@ public class AdminHome extends AppCompatActivity {
             }
         });
 
-        adminName = findViewById(R.id.Title);
-        Intent intent = getIntent();
-        String adminNameFromDB = intent.getStringExtra("name");
-        adminName.setText("Welcome Admin "+ adminNameFromDB);
+
 
 
     }

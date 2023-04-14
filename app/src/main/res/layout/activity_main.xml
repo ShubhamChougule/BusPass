@@ -1,193 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EF8785"
-    android:padding="10sp"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".RegisterActivity">
 
-
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="NEW USER REGISTRATION"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         android:padding="15sp">
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Full Name"
-            android:textColor="#FFFFFF"/>
+            android:fontFamily="@font/poppins_semibold"
+            android:text="NEW USER REGISTRATION"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
 
         <EditText
             android:id="@+id/et_fn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/etdesig"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Full Name"
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
             android:inputType="textPersonName"
-            android:padding="10sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Address"
-            android:textColor="#FFFFFF"/>
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/et_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Address"
             android:inputType="textPostalAddress"
-            android:padding="10sp"
-            android:background="@drawable/etdesig"/>
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PinCode"
-            android:textColor="#FFFFFF"/>
 
         <EditText
             android:id="@+id/et_pincode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="PinCode"
             android:inputType="textPostalAddress"
-            android:padding="10sp"
-            android:background="@drawable/etdesig"/>
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone No."
-            android:textColor="#FFFFFF"/>
 
         <EditText
             android:id="@+id/et_phn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Phone Number"
             android:inputType="phone"
-            android:padding="10sp"
-            android:background="@drawable/etdesig"/>
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email ID"
-            android:textColor="#FFFFFF"/>
 
         <EditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Email ID"
             android:inputType="textEmailAddress"
-            android:padding="10sp"
-            android:background="@drawable/etdesig"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Password"
-            android:textColor="#FFFFFF"/>
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/et_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Password"
             android:inputType="textPassword"
-            android:padding="10sp"
-            android:background="@drawable/etdesig"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Age"
-            android:textColor="#FFFFFF"/>
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/et_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Age"
             android:inputType="number"
-            android:padding="10sp"
-            android:background="@drawable/etdesig"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="College/School Name"
-            android:textColor="#FFFFFF"/>
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
+
         <EditText
             android:id="@+id/et_clg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="College/School Name"
             android:inputType="text"
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_startLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Start Location"
+            android:inputType="text"
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_endLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="7sp"
-            android:padding="10sp"
-            android:background="@drawable/etdesig"/>
-
-                <RadioGroup
-                    android:id="@+id/genderRadioGroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="7sp"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/maleRadioButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Male" />
-
-                    <RadioButton
-                        android:id="@+id/femaleRadioButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Female" />
-                </RadioGroup>
-
+            android:background="@drawable/white_button_background"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="End Location"
+            android:inputType="text"
+            android:paddingLeft="15sp"
+            android:paddingTop="7sp"
+            android:paddingBottom="7sp"
+            android:textSize="15sp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
 
             <Button
                 android:id="@+id/bt_signUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white_button_background"
-                android:textColor="@color/mainBackground"
                 android:layout_marginBottom="8dp"
-                android:textSize="15sp"
-                android:text="Create My Account" />
+                android:background="@drawable/green_button"
+                android:text="Create My Account"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/bt_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white_button_background"
-                android:textColor="@color/mainBackground"
-                android:textSize="15sp"
-                android:text="Go To Home Page" />
+                android:background="@drawable/red_button"
+                android:text="Go To Home Page"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

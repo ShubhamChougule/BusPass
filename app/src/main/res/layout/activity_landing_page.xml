@@ -9,7 +9,7 @@
     android:gravity="center_vertical"
     android:background="#EF8785"
     android:padding="10sp"
-    tools:context=".HomePage">
+    tools:context=".LandingPage">
 
     <TextView
         android:id="@+id/Title"

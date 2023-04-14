@@ -53,7 +53,8 @@ public class LoginActivity extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, HomePage.class));
+                startActivity(new Intent(LoginActivity.this, LandingPage.class));
+                finish();
             }
         });
     }
@@ -103,15 +104,39 @@ public class LoginActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(LoginActivity.this, MainPage.class);
 
-                        String nameFromDB = snapshot.child(userMobileNumber).child("fullName").getValue(String.class);
-                        String emailFromDB = snapshot.child(userMobileNumber).child("emailId").getValue(String.class);
-                        String addressFromDB = snapshot.child(userMobileNumber).child("address").getValue(String.class);
 
-                        intent.putExtra("mobile", userMobileNumber);
-                        intent.putExtra("name", nameFromDB);
-                        intent.putExtra("email", emailFromDB);
-                        intent.putExtra("password", passWordFromDB);
+                        String nameFromDB = snapshot.child(userMobileNumber).child("fullName").getValue(String.class);
+                        String addressFromDB = snapshot.child(userMobileNumber).child("address").getValue(String.class);
+                        String pincodeFromDB = snapshot.child(userMobileNumber).child("pincode").getValue(String.class);
+                        String phoneFromDB = snapshot.child(userMobileNumber).child("phoneNo").getValue(String.class);
+                        String emailFromDB = snapshot.child(userMobileNumber).child("emailId").getValue(String.class);
+                        String passFromDB = snapshot.child(userMobileNumber).child("passWord").getValue(String.class);
+                        String ageFromDB = snapshot.child(userMobileNumber).child("age").getValue(String.class);
+                        String collegeNameFromDB = snapshot.child(userMobileNumber).child("collegeName").getValue(String.class);
+                        String passDaysFromDB = snapshot.child(userMobileNumber).child("passDays").getValue(String.class);
+                        String passTypeFromDB = snapshot.child(userMobileNumber).child("passType").getValue(String.class);
+                        String oneMarkFromDB = snapshot.child(userMobileNumber).child("oneMark").getValue(String.class);
+                        String twoMarkFromDB = snapshot.child(userMobileNumber).child("twoMark").getValue(String.class);
+                        String startPositionFromDB = snapshot.child(userMobileNumber).child("startPosition").getValue(String.class);
+                        String endPositionFromDB = snapshot.child(userMobileNumber).child("endPosition").getValue(String.class);
+
+
+
+                        intent.putExtra("fullName", nameFromDB);
                         intent.putExtra("address", addressFromDB);
+                        intent.putExtra("pincode", pincodeFromDB);
+                        intent.putExtra("phoneNo", phoneFromDB);
+                        intent.putExtra("emailId", emailFromDB);
+                        intent.putExtra("passWord", passFromDB);
+
+                        intent.putExtra("age", ageFromDB);
+                        intent.putExtra("collegeName", collegeNameFromDB);
+                        intent.putExtra("passDays", passDaysFromDB);
+                        intent.putExtra("passType", passTypeFromDB);
+                        intent.putExtra("oneMark", oneMarkFromDB);
+                        intent.putExtra("twoMark", twoMarkFromDB);
+                        intent.putExtra("startPosition", startPositionFromDB);
+                        intent.putExtra("endPosition", endPositionFromDB);
 
                         startActivity(intent);
 

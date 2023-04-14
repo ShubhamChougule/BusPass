@@ -13,6 +13,9 @@
         android:theme="@style/Theme.UsPass"
         tools:targetApi="31">
         <activity
+            android:name=".ShowPass"
+            android:exported="false" />
+        <activity
             android:name=".VerifyPass"
             android:exported="false">
             <meta-data
@@ -62,7 +65,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".HomePage"
+            android:name=".LandingPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

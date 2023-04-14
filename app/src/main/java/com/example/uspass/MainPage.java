@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 public class MainPage extends AppCompatActivity {
 
 
-    ImageButton profileButton;
+    ImageButton profileButton, showPassButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -21,17 +21,32 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
 
-        profileButton = (ImageButton) findViewById(R.id.profile_button);
+        profileButton = findViewById(R.id.profile_button);
+        showPassButton = findViewById(R.id.showPass);
 
 
 
         // intent coming from login
         Intent intent = getIntent();
-        String mobileFromDB = intent.getStringExtra("mobile");
-        String nameFromDB = intent.getStringExtra("name");
-        String emailFromDB = intent.getStringExtra("email");
-        String passwordFromDB = intent.getStringExtra("password");
+
+        String nameFromDB = intent.getStringExtra("fullName");
         String addressFromDB = intent.getStringExtra("address");
+        String pincodeFromDB = intent.getStringExtra("pincode");
+        String mobileFromDB = intent.getStringExtra("phoneNo");
+        String emailFromDB = intent.getStringExtra("emailId");
+        String passwordFromDB = intent.getStringExtra("passWord");
+
+        String ageFromDB = intent.getStringExtra("age");
+        String collegeNameFromDB = intent.getStringExtra("collegeName");
+        String passDaysFromDB = intent.getStringExtra("passDays");
+        String passTypeFromDB = intent.getStringExtra("passType");
+        String oneMarkFromDB = intent.getStringExtra("oneMark");
+        String twoMarkFromDB = intent.getStringExtra("twoMark");
+        String startPositionFromDB = intent.getStringExtra("startPosition");
+        String endPositionFromDB = intent.getStringExtra("endPosition");
+
+
+
 
 
         profileButton.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +59,31 @@ public class MainPage extends AppCompatActivity {
                 intent.putExtra("email", emailFromDB);
                 intent.putExtra("password", passwordFromDB);
                 intent.putExtra("address", addressFromDB);
+
+                startActivity(intent);
+            }
+        });
+
+        showPassButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainPage.this, ShowPass.class);
+
+                intent.putExtra("fullName", nameFromDB);
+                intent.putExtra("address", addressFromDB);
+                intent.putExtra("pincode", pincodeFromDB);
+                intent.putExtra("phoneNo", mobileFromDB);
+                intent.putExtra("emailId", emailFromDB);
+                intent.putExtra("passWord", passwordFromDB);
+
+                intent.putExtra("age", ageFromDB);
+                intent.putExtra("collegeName", collegeNameFromDB);
+                intent.putExtra("passDays", passDaysFromDB);
+                intent.putExtra("passType", passTypeFromDB);
+                intent.putExtra("oneMark", oneMarkFromDB);
+                intent.putExtra("twoMark", twoMarkFromDB);
+                intent.putExtra("startPosition", startPositionFromDB);
+                intent.putExtra("endPosition", endPositionFromDB);
 
                 startActivity(intent);
             }

@@ -1,10 +1,16 @@
 package com.example.uspass;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HelperClass {
     String fullName, address, pinCode,phoneNo, emailId,passWord, age,  collegeName;
-    Boolean isMale;
+    String passDays;
+    String passType;
+    String oneMark, twoMark;
+    String startPosition, endPosition;
 
-    public HelperClass(String fullName, String address, String pinCode, String phoneNo, String emailId, String passWord, String age, String collegeName, Boolean isMale) {
+    public HelperClass(String fullName, String address, String pinCode, String phoneNo, String emailId, String passWord, String age, String collegeName, String passDays, String passType, String oneMark, String twoMark, String startPosition, String endPosition) {
         this.fullName = fullName;
         this.address = address;
         this.pinCode = pinCode;
@@ -13,19 +19,16 @@ public class HelperClass {
         this.passWord = passWord;
         this.age = age;
         this.collegeName = collegeName;
-        this.isMale = isMale;
+        this.passDays = passDays;
+        this.passType = passType;
+        this.oneMark = oneMark;
+        this.twoMark = twoMark;
+        this.startPosition = startPosition;
+        this.endPosition = endPosition;
     }
 
     public String getFullName() {
         return fullName;
-    }
-
-    public Boolean getMale() {
-        return isMale;
-    }
-
-    public void setMale(Boolean male) {
-        isMale = male;
     }
 
     public void setFullName(String fullName) {
@@ -38,30 +41,6 @@ public class HelperClass {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getCollegeName() {
-        return collegeName;
-    }
-
-    public void setCollegeName(String collegeName) {
-        this.collegeName = collegeName;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
-
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
     }
 
     public String getPinCode() {
@@ -80,12 +59,84 @@ public class HelperClass {
         this.phoneNo = phoneNo;
     }
 
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
     public String getAge() {
         return age;
     }
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+
+    public void setCollegeName(String collegeName) {
+        this.collegeName = collegeName;
+    }
+
+    public String getPassDays() {
+        return passDays;
+    }
+
+    public void setPassDays(String passDays) {
+        this.passDays = passDays;
+    }
+
+    public String getPassType() {
+        return passType;
+    }
+
+    public void setPassType(String passType) {
+        this.passType = passType;
+    }
+
+    public String getOneMark() {
+        return oneMark;
+    }
+
+    public void setOneMark(String oneMark) {
+        this.oneMark = oneMark;
+    }
+
+    public String getTwoMark() {
+        return twoMark;
+    }
+
+    public void setTwoMark(String twoMark) {
+        this.twoMark = twoMark;
+    }
+
+    public String getStartPosition() {
+        return startPosition;
+    }
+
+    public void setStartPosition(String startPosition) {
+        this.startPosition = startPosition;
+    }
+
+    public String getEndPosition() {
+        return endPosition;
+    }
+
+    public void setEndPosition(String endPosition) {
+        this.endPosition = endPosition;
     }
 
     public HelperClass() {

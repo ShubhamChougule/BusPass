@@ -100,10 +100,11 @@ public class Admin_Login extends AppCompatActivity {
                         Toast.makeText(Admin_Login.this, "Login Successfully", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(Admin_Login.this, AdminHome.class);
-                        String AdminName = snapshot.child(adminUserPassString).child("adminName").getValue(String.class);
-                        intent.putExtra("name", "shubham");
+                        String AdminName = snapshot.child(adminUserIdString).child("adminName").getValue(String.class);
+                        intent.putExtra("name", AdminName);
 
                         startActivity(intent);
+                        finish();
 
                     } else {
                         adminPassword.setError("Password is incorrect !!");

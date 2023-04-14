@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterActivity extends AppCompatActivity {
 
     Button signUp, bck;
-    EditText et1, et2, et3, et4, et5, et6, et7, et8;
+    EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10;
     FirebaseDatabase database;
     DatabaseReference reference;
 
@@ -36,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
         et6 = (EditText) findViewById(R.id.et_pass);
         et7 = (EditText) findViewById(R.id.et_date);
         et8 = (EditText) findViewById(R.id.et_clg);
+        et9 = (EditText) findViewById(R.id.et_startLocation);
+        et10 = (EditText) findViewById(R.id.et_endLocation);
 
 
 
@@ -62,10 +64,12 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = et6.getText().toString();
                 String age = et7.getText().toString();
                 String college = et8.getText().toString();
-                boolean isMale = true;
+                String startPosition = et9.getText().toString();
+                String endPosition = et10.getText().toString();
 
 
-                HelperClass helperClass = new HelperClass(fullName, address,  pinCode,  phoneNo,  emailId,  password,  age,  college, isMale);
+                HelperClass helperClass = new HelperClass(fullName, address,  pinCode,  phoneNo,  emailId,  password,  age,  college,
+                                                  "0", "not purchased yet", "Not Marked", "Not Marked", startPosition, endPosition);
                 reference.child(phoneNo).setValue(helperClass);
 
                 Toast.makeText(RegisterActivity.this, "You have signup successfully", Toast.LENGTH_SHORT).show();
@@ -94,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
         bck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(RegisterActivity.this, HomePage.class);
+                Intent it = new Intent(RegisterActivity.this, LandingPage.class);
                 startActivity(it);
             }
         });
@@ -111,7 +115,9 @@ public class RegisterActivity extends AppCompatActivity {
                 et5.getText().toString().isEmpty() ||
                 et6.getText().toString().isEmpty() ||
                 et7.getText().toString().isEmpty() ||
-                et8.getText().toString().isEmpty()) {
+                et8.getText().toString().isEmpty() ||
+                et9.getText().toString().isEmpty() ||
+                et10.getText().toString().isEmpty()) {
             return true;
         }
 

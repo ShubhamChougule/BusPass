@@ -23,7 +23,7 @@
 
 
         <TextView
-            android:id="@+id/Title"
+            android:id="@+id/admin_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Admin Login"
