@@ -8,10 +8,23 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/bus_logo"
         android:label="@string/app_name"
+
         android:roundIcon="@mipmap/bus_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UsPass"
         tools:targetApi="31">
+        <activity
+            android:name=".TimeTable"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".ContactUs"
+            android:exported="false" />
+        <activity
+            android:name=".CheckIn"
+            android:exported="false" />
         <activity
             android:name=".ShowPass"
             android:exported="false" />

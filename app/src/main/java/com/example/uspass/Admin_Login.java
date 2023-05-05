@@ -47,11 +47,6 @@ public class Admin_Login extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
     }
 
 

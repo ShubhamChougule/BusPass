@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 public class MainPage extends AppCompatActivity {
 
 
-    ImageButton profileButton, showPassButton;
+    ImageButton profileButton, showPassButton, checkInButton, timeTabelButton, aboutUsButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -23,7 +23,9 @@ public class MainPage extends AppCompatActivity {
 
         profileButton = findViewById(R.id.profile_button);
         showPassButton = findViewById(R.id.showPass);
-
+        checkInButton = findViewById(R.id.checkInBtn);
+        timeTabelButton = findViewById(R.id.timetable);
+        aboutUsButton = findViewById(R.id.aboutus);
 
 
         // intent coming from login
@@ -86,6 +88,48 @@ public class MainPage extends AppCompatActivity {
                 intent.putExtra("endPosition", endPositionFromDB);
 
                 startActivity(intent);
+            }
+        });
+
+        checkInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainPage.this, CheckIn.class);
+                intent.putExtra("fullName", nameFromDB);
+                intent.putExtra("address", addressFromDB);
+                intent.putExtra("pincode", pincodeFromDB);
+                intent.putExtra("phoneNo", mobileFromDB);
+                intent.putExtra("emailId", emailFromDB);
+                intent.putExtra("passWord", passwordFromDB);
+
+                intent.putExtra("age", ageFromDB);
+                intent.putExtra("collegeName", collegeNameFromDB);
+                intent.putExtra("passDays", passDaysFromDB);
+                intent.putExtra("passType", passTypeFromDB);
+                intent.putExtra("oneMark", oneMarkFromDB);
+                intent.putExtra("twoMark", twoMarkFromDB);
+                intent.putExtra("startPosition", startPositionFromDB);
+                intent.putExtra("endPosition", endPositionFromDB);
+
+                startActivity(intent);
+            }
+        });
+
+        timeTabelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainPage.this, TimeTable.class);
+                intent.putExtra("startPosition", startPositionFromDB);
+                intent.putExtra("endPosition", endPositionFromDB);
+                startActivity(intent);
+            }
+        });
+
+
+        aboutUsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainPage.this, AboutUs.class));
             }
         });
 

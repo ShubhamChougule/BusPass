@@ -82,7 +82,7 @@
             android:text="@string/history5"
             android:textAlignment="center"
             android:padding="10dp"
-            android:textColor="#4C8AF5"
+            android:textColor="#F58B4C"
             android:textSize="13sp"
             android:textStyle="bold" />
 

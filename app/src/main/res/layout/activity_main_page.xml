@@ -67,10 +67,11 @@
 
                 <ImageButton
                     android:layout_width="80dp"
+                    android:id="@+id/checkInBtn"
                     android:layout_height="80dp"
                     android:layout_marginBottom="8dp"
                     android:scaleType="fitCenter"
-                    android:background="@drawable/buy"/>
+                    android:background="@drawable/checkin"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,7 +79,7 @@
                     android:textColor="#000000"
                     android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:text="Buy Pass" />
+                    android:text="Check-In" />
 
             </LinearLayout>
 
@@ -124,6 +125,7 @@
                 android:gravity="center">
 
                 <ImageButton
+                    android:id="@+id/timetable"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@drawable/schedule"
@@ -157,6 +159,7 @@
                 android:gravity="center">
 
                 <ImageButton
+                    android:id="@+id/aboutus"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@drawable/information"

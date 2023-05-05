@@ -6,39 +6,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EF8785"
+    android:gravity="center"
     android:padding="10sp"
     tools:context=".LoginActivity">
 
 
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textSize="30sp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="15sp">
+        android:elevation="20dp"
+        android:background="@drawable/white_background"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/mainBackground"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mobile Number"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/et_login_mobileNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/etdesig"
+            android:background="@drawable/edittext_best_design"
             android:inputType="number"
             android:padding="10sp" />
 
@@ -46,13 +51,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/et_login_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/etdesig"
+            android:background="@drawable/edittext_best_design"
             android:inputType="textPassword"
             android:padding="10sp" />
 
@@ -68,24 +73,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/white_button_background"
+                android:background="@drawable/red_button_background"
                 android:text="Login now"
-                android:textColor="@color/mainBackground"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
                 android:textSize="15sp" />
 
             <Button
                 android:id="@+id/bt_login_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white_button_background"
+                android:background="@drawable/red_button_background"
                 android:text="Go To Home Page"
-                android:textColor="@color/mainBackground"
+                android:layout_margin="10sp"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
 
         </LinearLayout>
 
     </LinearLayout>
+
+
+
 
 
 </LinearLayout>

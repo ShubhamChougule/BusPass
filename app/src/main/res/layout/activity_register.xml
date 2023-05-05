@@ -5,16 +5,18 @@
     android:layout_height="match_parent"
     android:background="#EF8785"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="10dp"
     tools:context=".RegisterActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="15sp">
+        android:background="@drawable/white_background"
+        android:padding="20dp">
 
 
         <TextView
@@ -23,7 +25,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:text="NEW USER REGISTRATION"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/mainBackground"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -33,12 +35,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="Full Name"
             android:paddingLeft="15sp"
             android:paddingTop="7sp"
             android:paddingBottom="7sp"
+
             android:inputType="textPersonName"
             android:textSize="15sp" />
 
@@ -47,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="Address"
             android:inputType="textPostalAddress"
@@ -62,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="PinCode"
             android:inputType="textPostalAddress"
@@ -77,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="Phone Number"
             android:inputType="phone"
@@ -92,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="Email ID"
             android:inputType="textEmailAddress"
@@ -106,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="Password"
             android:inputType="textPassword"
@@ -120,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="Age"
             android:inputType="number"
@@ -134,7 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="College/School Name"
             android:inputType="text"
@@ -148,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="Start Location"
             android:inputType="text"
@@ -163,7 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="7sp"
-            android:background="@drawable/white_button_background"
+            android:background="@drawable/edittext_best_design"
             android:fontFamily="@font/poppins_medium"
             android:hint="End Location"
             android:inputType="text"
@@ -186,7 +189,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/green_button"
+                android:background="@drawable/light_blue"
                 android:text="Create My Account"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
@@ -195,9 +198,9 @@
                 android:id="@+id/bt_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/red_button"
+                android:background="@drawable/very_ligh_blue"
                 android:text="Go To Home Page"
-                android:textColor="@color/white"
+                android:textColor="#3F51B5"
                 android:textSize="15sp" />
 
         </LinearLayout>

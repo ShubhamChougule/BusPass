@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Welcome To UsPass"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/poppins_semibold"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:textAlignment="center"

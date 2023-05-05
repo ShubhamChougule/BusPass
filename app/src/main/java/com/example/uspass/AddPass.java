@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,10 +23,12 @@ public class AddPass extends AppCompatActivity {
 
     Button searchButton, oneDayPassButton, oneWeekPassButton, oneMonthPassButton;
     EditText mobileNumberTextView;
-
     TextView profileMobile, profileName, profileAddress , profilePassPlanType, profilePassRemDays;
-
     String UserFinalNumber;
+
+    LinearLayout addPass;
+
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -45,6 +48,9 @@ public class AddPass extends AppCompatActivity {
         profileAddress = findViewById(R.id.useraddress);
         profilePassPlanType = findViewById(R.id.passPlan);
         profilePassRemDays = findViewById(R.id.remDaysPass);
+
+
+        addPass = findViewById(R.id.panel_add_pass);
 
 
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -127,13 +133,16 @@ public class AddPass extends AppCompatActivity {
                     days = days.trim();
 
 
+                    UserFinalNumber = mobileNumber;
+
+
                     if(days.equals("0")) {
                         Toast.makeText(AddPass.this, "select appropriate pass", Toast.LENGTH_LONG).show();
                         makeButtonsVisible();
-                        UserFinalNumber = mobileNumber;
                         addDetails();
                     } else {
                         Toast.makeText(AddPass.this, "User already using pass service", Toast.LENGTH_LONG).show();
+                        addDetails();
                         makeButtonsDisable();
                     }
 
@@ -182,13 +191,9 @@ public class AddPass extends AppCompatActivity {
     }
 
     private void makeButtonsVisible() {
-        oneDayPassButton.setClickable(true);
-        oneWeekPassButton.setClickable(true);
-        oneMonthPassButton.setClickable(true);
+        addPass.setVisibility(View.VISIBLE);
     }
     private void makeButtonsDisable() {
-        oneDayPassButton.setClickable(false);
-        oneWeekPassButton.setClickable(false);
-        oneMonthPassButton.setClickable(false);
+        addPass.setVisibility(View.INVISIBLE);
     }
 }
