@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 public class MainPage extends AppCompatActivity {
 
 
-    ImageButton profileButton, showPassButton, checkInButton, timeTabelButton, aboutUsButton;
+    ImageButton profileButton, showPassButton, checkInButton, timeTabelButton, aboutUsButton, contactUsButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,6 +26,8 @@ public class MainPage extends AppCompatActivity {
         checkInButton = findViewById(R.id.checkInBtn);
         timeTabelButton = findViewById(R.id.timetable);
         aboutUsButton = findViewById(R.id.aboutus);
+        contactUsButton = findViewById(R.id.contactUsBtn);
+
 
 
         // intent coming from login
@@ -130,6 +132,14 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainPage.this, AboutUs.class));
+            }
+        });
+
+
+        contactUsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainPage.this, ContactUs.class));
             }
         });
 
