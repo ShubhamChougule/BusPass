@@ -90,43 +90,7 @@
             android:background="@color/color1" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:orientation="horizontal"
-            android:padding="8dp">
 
-
-            <TextView
-                android:id="@+id/useraddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Address"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Address"
-                android:fontFamily="@font/poppins_semibold"
-                android:textAlignment="textEnd"
-                android:textColor="@color/cyan"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="10dp"
-            android:alpha="0.5"
-            android:background="@color/color1" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -304,6 +268,46 @@
                 android:text="1 Month"/>
 
         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8692F7"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:text="Rs.40"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8692F7"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:text="Rs.250"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#8692F7"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:text="Rs.750"/>
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </LinearLayout>

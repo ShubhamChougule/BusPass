@@ -23,7 +23,7 @@ public class AddPass extends AppCompatActivity {
 
     Button searchButton, oneDayPassButton, oneWeekPassButton, oneMonthPassButton;
     EditText mobileNumberTextView;
-    TextView profileMobile, profileName, profileAddress , profilePassPlanType, profilePassRemDays;
+    TextView profileMobile, profileName , profilePassPlanType, profilePassRemDays;
     String UserFinalNumber;
 
     LinearLayout addPass;
@@ -45,7 +45,6 @@ public class AddPass extends AppCompatActivity {
 
         profileMobile = findViewById(R.id.number);
         profileName = findViewById(R.id.username);
-        profileAddress = findViewById(R.id.useraddress);
         profilePassPlanType = findViewById(R.id.passPlan);
         profilePassRemDays = findViewById(R.id.remDaysPass);
 
@@ -65,8 +64,6 @@ public class AddPass extends AppCompatActivity {
 
             }
         });
-
-
 
         oneDayPassButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,7 +165,6 @@ public class AddPass extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String nameFromDB = snapshot.child(UserFinalNumber).child("fullName").getValue(String.class);
-                String addressFromDB = snapshot.child(UserFinalNumber).child("address").getValue(String.class);
                 String passPlanFromDB = snapshot.child(UserFinalNumber).child("passType").getValue(String.class);
                 String remDaysFromDB = snapshot.child(UserFinalNumber).child("passDays").getValue(String.class);
 
@@ -176,7 +172,6 @@ public class AddPass extends AppCompatActivity {
 
                 profileName.setText(nameFromDB);
                 profileMobile.setText(UserFinalNumber);
-                profileAddress.setText(addressFromDB);
                 profilePassPlanType.setText(passPlanFromDB);
                 profilePassRemDays.setText(remDaysFromDB);
             }
